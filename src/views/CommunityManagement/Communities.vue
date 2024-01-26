@@ -12,8 +12,8 @@
           <img v-if="community.imageUrl" :src="community.imageUrl" alt="Community Image" class="community-image" @click="goToCommunityDetails(community.communityId)"/>
           <img v-else :src="require(`@/assets/logo.png`)" alt="Default Image" class="community-image" @click="goToCommunityDetails(community.communityId)"/>
           {{ community.communityId }} - {{ community.name }} - {{ community.address }} - {{ community.description }}
-          <button @click="editCommunity(community)">编辑</button>
-          <button @click="confirmDelete(community.communityId)">删除</button>
+          <button @click.stop="editCommunity(community)">编辑</button>
+          <button @click.stop="confirmDelete(community.communityId)">删除</button>
         </li>
       </ul>
     </div>

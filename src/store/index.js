@@ -81,6 +81,7 @@ import { createStore } from 'vuex';
 import Vuex from 'vuex';
 import user from './modules/user';
 import community from './modules/community';
+import building from './modules/building';
 import bill from './modules/bill';
 import image from './modules/image';
 
@@ -107,6 +108,7 @@ export default createStore({
   modules: {
     user,
     community,
+    building,
     bill,
     image
   }

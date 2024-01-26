@@ -6,7 +6,11 @@ import Communities from '../views/CommunityManagement/Communities.vue'
 import AddCommunity from '../views/CommunityManagement/AddCommunity.vue'
 import EditCommunity from '../views/CommunityManagement/EditCommunity.vue'
 import CommunityDetails from '../views/CommunityManagement/CommunityDetails.vue'
+import MapDetails from '../views/CommunityManagement/MapDetails.vue'
 import Buildings from '../views/BuildingManagement/Buildings.vue'
+import AddBuilding from '../views/BuildingManagement/AddBuilding.vue'
+import EditBuilding from '../views/BuildingManagement/EditBuilding.vue'
+import BuildingDetails from '../views/BuildingManagement/BuildingDetails.vue'
 import Users from '../views/UserManagement/Users.vue'
 import Bills from '../views/BillManagement/Bills.vue'
 import Maintenance from '../views/MaintenanceRequests/Maintenance.vue'
@@ -22,8 +26,13 @@ const routes = [
     { path: '/communities/add', component: AddCommunity, name: 'AddCommunity' },
     { path: '/communities/edit/:communityId', component: EditCommunity, name: 'EditCommunity' },
     { path: '/communities/details/:communityId', component: CommunityDetails, name: 'CommunityDetails' },
+    { path: '/communities/mapDetails/:communityId', component: MapDetails, name: 'MapDetails' },
 
-    { path: '/buildings', component: Buildings, name: 'Buildings' },
+    { path: '/buildings/:communityId', component: Buildings, name: 'Buildings' },
+    { path: '/buildings/add/:communityId', component: AddBuilding, name: 'AddBuilding' },
+    { path: '/buildings/edit/:buildingId', component: EditBuilding, name: 'EditBuilding' },
+    { path: '/buildings/details/:buildingId', component: BuildingDetails, name: 'BuildingDetails' },
+
     { path: '/users', component: Users, name: 'Users' },
     { path: '/bills', component: Bills, name: 'Bills' },
     { path: '/maintenance', component: Maintenance, name: 'Maintenance' },
